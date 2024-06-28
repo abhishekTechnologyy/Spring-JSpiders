@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="dept" class="org.jsp.springDI.autowiring.Department">
+	
+<!-- 					Injecting Set          -->
+
+	<property name="emp_ids">
+	
+		<set>
+			<value>101</value>
+			<value>201</value>
+			<value>301</value>
+		</set>
+		
+	</property>
+	
+<!-- 					Injecting List          -->
+
+	<property name="emp_names">
+	
+		<list>
+			<value>ABC</value>
+			<value>PQR</value>
+			<value>XYZ</value>
+		</list>
+		
+	</property>
+	
+<!-- 					Injecting MAP          -->
+
+	<property name="emp_details">
+	
+		<map>
+			<entry key="101" value="ABC"></entry>
+			<entry key="201" value="PQR"></entry>
+			<entry key="301" value="XYZ"></entry>
+		</map>
+		
+	</property>
+	
+<!-- 					Injecting Properties          -->
+
+	<property name="dept_details">
+	
+		<props>
+			<prop key="department_name"> Development </prop>
+			<prop key="department_location"> BTM Layout,Bengaluru </prop>
+			<prop key="Number_of_employees"> Three </prop>
+		</props>
+		
+	</property>
+	
+	</bean>
+</beans>
